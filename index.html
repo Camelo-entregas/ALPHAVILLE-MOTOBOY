@@ -7,73 +7,124 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #2c3e50; /* Azul escuro */
-            --secondary: #e67e22; /* Laranja */
-            --dark: #34495e;
-            --light: #ecf0f1;
+            --primary: #2c3e50; /* Azul escuro profissional */
+            --secondary: #e67e22; /* Laranja vibrante */
+            --dark: #333;
+            --light: #f9f9f9;
             --white: #fff;
         }
         
-        /* [Seu CSS base permanece igual] */
-        
-        /* Novo Estilo para Seção de Serviços */
-        .services-section {
-            padding: 80px 0;
-            background: linear-gradient(135deg, var(--light) 0%, #dfe6e9 100%);
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
-        .service-header {
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
             text-align: center;
-            margin-bottom: 50px;
         }
         
-        .service-header h2 {
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: var(--secondary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin: 30px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .price-tag span {
+            font-size: 28px;
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
             font-size: 36px;
+            margin-bottom: 50px;
             color: var(--primary);
             position: relative;
-            display: inline-block;
         }
         
-        .service-header h2::after {
+        .section-title::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 80px;
+            width: 100px;
             height: 3px;
             background: var(--secondary);
-        }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
         }
         
         .service-card {
             background: var(--white);
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             border-left: 4px solid var(--secondary);
         }
         
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        .service-card h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 24px;
         }
         
-        .service-card h3 {
-            background: var(--primary);
-            color: white;
-            padding: 15px;
-            font-size: 20px;
+        .service-card p {
+            margin-bottom: 15px;
         }
         
         .service-card ul {
-            padding: 20px;
             list-style: none;
         }
         
@@ -82,82 +133,108 @@
             border-bottom: 1px dashed #eee;
             display: flex;
             align-items: center;
-            gap: 10px;
         }
         
-        .service-card i {
+        .service-card li i {
             color: var(--secondary);
+            margin-right: 10px;
         }
         
-        /* Mapa Integrado */
-        .coverage-map {
-            margin-top: 60px;
-            background: var(--white);
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 32px;
+            }
+            
+            .price-tag {
+                font-size: 20px;
+                padding: 12px 25px;
+            }
+            
+            .price-tag span {
+                font-size: 24px;
+            }
         }
     </style>
 </head>
 <body>
-
-    <!-- Seção de Serviços -->
-    <section class="services-section">
+    <!-- Header -->
+    <header>
         <div class="container">
-            <div class="service-header">
+            <div class="logo">PRATA <span>MOTO SERVICE</span></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>SERVIÇOS DE MOTOBOY</h1>
+            <p>Agilidade e qualidade em entregas rápidas por toda São Paulo</p>
+            <div class="price-tag">A PARTIR DE <span>R$ 14,00</span></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">NOSSOS SERVIÇOS</h2>
+            
+            <div class="service-card">
+                <h2>PRATA MOTO SERVICE</h2>
+                <p>Nossa agilidade, qualidade e experiência são os valores que fortalecem nossos relacionamentos com clientes e fornecedores.</p>
+            </div>
+            
+            <div class="service-card">
                 <h2>SERVIÇOS DE MOTOBOY</h2>
-                <p>Nossa agilidade, qualidade e experiência são os valores que fortalecem nossos relacionamentos</p>
+                <p>Empresa especializada em serviços de motoboy, realizando entregas rápidas com agilidade e preços competitivos em toda a Grande São Paulo.</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Entregas expressas 24 horas</li>
+                    <li><i class="fas fa-check"></i> Documentos e encomendas</li>
+                    <li><i class="fas fa-check"></i> Atendimento personalizado</li>
+                </ul>
             </div>
             
-            <div class="service-grid">
-                <!-- Cartão 1 -->
-                <div class="service-card">
-                    <h3>PRATA MOTO SERVICE</h3>
-                    <ul>
-                        <li><i class="fas fa-bolt"></i> Entregas expressas 24h</li>
-                        <li><i class="fas fa-map-marked-alt"></i> Grande São Paulo</li>
-                        <li><i class="fas fa-shield-alt"></i> Documentos com segurança</li>
-                    </ul>
-                </div>
-                
-                <!-- Cartão 2 -->
-                <div class="service-card">
-                    <h3>ENTREGAS ESPECIAIS</h3>
-                    <ul>
-                        <li><i class="fas fa-plane-departure"></i> Serviços aeroportuários</li>
-                        <li><i class="fas fa-file-invoice-dollar"></i> Pagamento de contas</li>
-                        <li><i class="fas fa-truck-moving"></i> Pequenas cargas</li>
-                    </ul>
-                </div>
-                
-                <!-- Cartão 3 -->
-                <div class="service-card">
-                    <h3>COTAÇÃO RÁPIDA</h3>
-                    <ul>
-                        <li><i class="fas fa-comment-dollar"></i> Orçamento imediato</li>
-                        <li><i class="fas fa-phone-alt"></i> Atendimento personalizado</li>
-                        <li><i class="fas fa-clock"></i> Resposta em 15 minutos</li>
-                    </ul>
+            <div class="service-card">
+                <h2>COTAÇÃO</h2>
+                <p>Solicite um orçamento e teremos grande satisfação em atendê-lo.</p>
+                <div style="text-align: center; margin-top: 20px;">
+                    <div style="display: inline-block; background: var(--light); padding: 15px 25px; border-radius: 8px;">
+                        <i class="fas fa-phone-alt" style="color: var(--secondary);"></i> Ligue agora: (11) 9999-9999
+                    </div>
                 </div>
             </div>
             
-            <!-- Mapa de Cobertura -->
-            <div class="coverage-map">
-                <h3 style="color: var(--primary); margin-bottom: 20px; text-align: center;">
-                    <i class="fas fa-map-pin"></i> ÁREA DE COBERTURA
-                </h3>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.3957994779!2d-46.92496015!3d-23.68143455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1717123456789!5m2!1spt-BR!2sbr" 
-                            width="100%" 
-                            height="400" 
-                            style="border:0; border-radius: 5px;" 
-                            allowfullscreen="" 
-                            loading="lazy">
-                    </iframe>
-                </div>
+            <div class="service-card">
+                <h2>ALGUNS DE NOSSOS SERVIÇOS</h2>
+                <ul>
+                    <li><i class="fas fa-briefcase"></i> Serviços Bancários - depósitos, pagamentos e transferências</li>
+                    <li><i class="fas fa-plane"></i> Serviços Aeroportuários - despacho e entrega de documentos</li>
+                    <li><i class="fas fa-box"></i> Entregas de encomendas e pequenas cargas</li>
+                </ul>
             </div>
         </div>
     </section>
 
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
