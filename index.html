@@ -6,7 +6,194 @@
     <title>Motoboy Alphaville - Entregas Rápidas e Seguras</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* [Seu CSS existente permanece igual] */
+        /* Estilos existentes */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        .logo span {
+            color: #fff;
+        }
+        
+        .hero {
+            background-color: #f5f5f5;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+        
+        .price-tag {
+            background-color: #ff6600;
+            color: white;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        
+        .price-tag span {
+            font-weight: bold;
+            font-size: 24px;
+        }
+        
+        .services {
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+        
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+        
+        .gallery img {
+            width: 100%;
+            max-width: 350px;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        
+        .service-card h2 {
+            color: #ff6600;
+            margin-bottom: 20px;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+        
+        .service-card li {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .service-card i {
+            color: #ff6600;
+            margin-right: 10px;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            z-index: 100;
+        }
+        
+        /* Novos estilos para o rodapé */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 50px 0 20px;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            color: #ff6600;
+            margin-bottom: 20px;
+            font-size: 20px;
+        }
+        
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            line-height: 1.6;
+        }
+        
+        .footer-section a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            color: #ff6600;
+        }
+        
+        .footer-logos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .footer-logo {
+            height: 80px;
+            filter: brightness(0) invert(1);
+        }
+        
+        .copyright {
+            border-top: 1px solid #555;
+            padding-top: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
@@ -26,19 +213,18 @@
         </div>
     </section>
 
-    <!-- Services Section - PARTE CORRIGIDA -->
+    <!-- Services Section -->
     <section class="services">
         <div class="container">
             <h2 class="section-title">NOSSOS SERVIÇOS</h2>
             
-            <!-- Galeria de Imagens Funcionais -->
+            <!-- Galeria de Imagens -->
             <div class="gallery">
                 <img src="https://images.unsplash.com/photo-1599741844851-20a80fae4b0d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Motoboy profissional">
                 <img src="https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Entrega rápida">
                 <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Motoboy em ação">
             </div>
             
-            <!-- Seção de Serviços Corrigida -->
             <div class="service-card">
                 <h2>MOTOBOY PROFISSIONAL</h2>
                 <ul>
@@ -47,11 +233,43 @@
                     <li><i class="fas fa-check"></i> Rastreamento em tempo real</li>
                 </ul>
             </div>
-            
-            <!-- [Outras seções de serviço permanecem iguais] -->
-            
         </div>
     </section>
+
+    <!-- Novo Rodapé -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CONTATO</h3>
+                    <p><i class="fas fa-phone"></i> (11) 99999-9999</p>
+                    <p><i class="fas fa-envelope"></i> contato@motoboyalphaville.com.br</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>HORÁRIO</h3>
+                    <p>Segunda a Sexta: 8h às 18h</p>
+                    <p>Sábado: 9h às 13h</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>LINKS RÁPIDOS</h3>
+                    <a href="#"><i class="fas fa-arrow-right"></i> Serviços</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i> Área de Cobertura</a>
+                    <a href="#"><i class="fas fa-arrow-right"></i> Termos de Serviço</a>
+                </div>
+            </div>
+            
+            <div class="footer-logos">
+                <img class="footer-logo" src="https://i.imgur.com/JqYeZ2L.png" alt="Entregas Alphaville">
+                <img class="footer-logo" src="https://i.imgur.com/Kj8vF3x.png" alt="Motoboy Express">
+            </div>
+            
+            <div class="copyright">
+                &copy; 2025 Motoboy Alphaville - Todos os direitos reservados
+            </div>
+        </div>
+    </footer>
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/5511999999999" class="whatsapp-btn" target="_blank">
