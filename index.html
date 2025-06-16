@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Serviço profissional de motoboy em Alphaville - Entregas rápidas a partir de R$14">
+    <meta name="description" content="Motoboy Alphaville - Entregas rápidas a partir de R$14. Serviço profissional para empresas e condomínios.">
     <title>Entregas Rápidas Alphaville</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Estilo profissional e moderno */
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -22,11 +23,12 @@
             margin: 0 auto;
         }
         
+        /* Cabeçalho destacado */
         header {
             background-color: #ff6600;
             color: white;
             padding: 15px 0;
-            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header-content {
@@ -38,35 +40,41 @@
         .logo {
             font-size: 24px;
             font-weight: bold;
+            text-transform: uppercase;
         }
         
         .price-tag {
-            background-color: white;
+            background-color: #fff;
             color: #ff6600;
-            padding: 5px 10px;
-            border-radius: 4px;
+            padding: 8px 15px;
+            border-radius: 30px;
             font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
+        /* Hero Section - Impacto visual */
         .hero {
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('https://bing.com/th/id/BCO.dccb45d2-59c3-432d-a0df-7d0383cdd012.png');
             background-size: cover;
             background-position: center;
             text-align: center;
-            padding: 80px 0;
+            padding: 100px 0;
             color: white;
         }
         
         .hero h1 {
-            font-size: 36px;
+            font-size: 42px;
             margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         
         .hero p {
-            font-size: 18px;
+            font-size: 20px;
             margin-bottom: 25px;
-            max-width: 800px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -75,77 +83,157 @@
             display: inline-block;
             background-color: #ff6600;
             color: white;
-            padding: 12px 25px;
-            border-radius: 5px;
+            padding: 15px 30px;
+            border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 18px;
             transition: all 0.3s;
+            border: 2px solid #ff6600;
         }
         
+        .cta-button:hover {
+            background-color: transparent;
+            color: #ff6600;
+        }
+        
+        /* Seção de Serviços - Layout atrativo */
         .services {
-            padding: 50px 0;
+            padding: 60px 0;
             background-color: #fff;
         }
         
         .section-title {
-            font-size: 28px;
+            font-size: 32px;
             text-align: center;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
+            color: #333;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: #ff6600;
         }
         
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
         
         .service-card {
-            background-color: #f5f5f5;
-            border-radius: 8px;
+            background-color: #fff;
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
         }
         
         .service-img {
             width: 100%;
-            height: 180px;
+            height: 200px;
             object-fit: cover;
         }
         
         .service-content {
             padding: 20px;
+            text-align: center;
         }
         
         .service-content h3 {
             color: #ff6600;
             margin-top: 0;
+            font-size: 22px;
         }
         
+        .service-content p {
+            color: #666;
+        }
+        
+        /* Rodapé profissional */
         footer {
             background-color: #222;
             color: white;
-            padding: 30px 0;
+            padding: 40px 0 20px;
             text-align: center;
         }
         
+        .footer-contact {
+            margin-bottom: 20px;
+        }
+        
+        .footer-contact p {
+            margin: 5px 0;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .social-links a {
+            color: white;
+            background-color: #444;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: #ff6600;
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            color: #aaa;
+            font-size: 14px;
+        }
+        
+        /* Botão do WhatsApp flutuante */
         .whatsapp-btn {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 30px;
+            right: 30px;
             background-color: #25D366;
             color: white;
-            width: 50px;
-            height: 50px;
+            width: 60px;
+            height: 60px;
             border-radius: 50%;
             text-align: center;
-            line-height: 50px;
-            font-size: 24px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
+            transition: all 0.3s;
         }
         
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Responsividade */
         @media (max-width: 768px) {
             .header-content {
                 flex-direction: column;
+                text-align: center;
             }
             
             .price-tag {
@@ -153,7 +241,11 @@
             }
             
             .hero h1 {
-                font-size: 28px;
+                font-size: 32px;
+            }
+            
+            .hero p {
+                font-size: 18px;
             }
         }
     </style>
@@ -170,10 +262,10 @@
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container">
-            <h1>SERVIÇO DE MOTOBOY EM ALPHAVILLE</h1>
-            <p>Entregas rápidas e seguras para condomínios e empresas na região</p>
+            <h1>SERVIÇO DE MOTOBOY ALPHAVILLE</h1>
+            <p>Entregas rápidas, seguras e com preço acessível para empresas e condomínios</p>
             <a href="https://wa.me/551131361615" class="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> SOLICITAR ENTREGA
+                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
             </a>
         </div>
     </section>
@@ -187,24 +279,24 @@
                 <div class="service-card">
                     <img src="https://ts2.mm.bing.net/th?id=OIP.1FPOvVxX2ephZPaOw2ZLEQHaE7&pid=15.1" alt="Motoboy em entrega" class="service-img">
                     <div class="service-content">
-                        <h3>ENTREGAS URGENTES</h3>
-                        <p>Documentos, encomendas e pacotes com rapidez e segurança.</p>
+                        <h3>ENTREGAS EXPRESSAS</h3>
+                        <p>Documentos, pacotes e encomendas entregues em até 1 hora.</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
                     <img src="https://bing.com/th/id/BCO.8c379612-8a89-433d-835a-220b6c240075.png" alt="Avenida em Alphaville" class="service-img">
                     <div class="service-content">
-                        <h3>ATENDIMENTO CORPORATIVO</h3>
-                        <p>Soluções logísticas para empresas com relatórios de entrega.</p>
+                        <h3>ATENDIMENTO 24H</h3>
+                        <p>Serviço disponível inclusive em finais de semana e feriados.</p>
                     </div>
                 </div>
                 
                 <div class="service-card">
                     <img src="https://bing.com/th/id/BCO.dccb45d2-59c3-432d-a0df-7d0383cdd012.png" alt="Entrega em edifício" class="service-img">
                     <div class="service-content">
-                        <h3>ENTREGAS EM CONDOMÍNIOS</h3>
-                        <p>Acesso facilitado a todos os edifícios da região.</p>
+                        <h3>ENTREGAS CORPORATIVAS</h3>
+                        <p>Soluções logísticas completas para empresas.</p>
                     </div>
                 </div>
             </div>
@@ -214,9 +306,20 @@
     <!-- Rodapé -->
     <footer>
         <div class="container">
-            <p><i class="fas fa-phone"></i> (11) 3136-1615</p>
-            <p>Atendimento 24 horas</p>
-            <p>&copy; 2023 Entregas Rápidas Alphaville</p>
+            <div class="footer-contact">
+                <p><i class="fas fa-phone"></i> (11) 3136-1615</p>
+                <p><i class="fas fa-map-marker-alt"></i> Atendemos toda Alphaville</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 Entregas Rápidas Alphaville - Todos os direitos reservados
+            </div>
         </div>
     </footer>
 
