@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Motoboy Alphaville - Entregas rápidas a partir de R$14,00. Serviço profissional para empresas e condomínios.">
-    <title>Entregas Rápidas Alphaville</title>
+    <meta name="description" content="Motoboy Alphaville - Mais de 30 anos de entregas rápidas e seguras a partir de R$14. Serviço profissional para empresas e condomínios.">
+    <title>Entregas Rápidas Alphaville - 30 Anos de Confiança</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         /* Estilo profissional e moderno */
@@ -27,14 +27,15 @@
         header {
             background-color: #ff6600;
             color: white;
-            padding: 15px 0;
+            padding: 20px 0;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
-        .header-content {
+        .header-top {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 15px;
         }
         
         .logo {
@@ -43,14 +44,37 @@
             text-transform: uppercase;
         }
         
-        .price-tag {
-            background-color: #fff;
-            color: #ff6600;
+        .header-contact {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .phone {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+        
+        .header-whatsapp {
+            background-color: #25D366;
+            color: white;
             padding: 8px 15px;
             border-radius: 30px;
+            text-decoration: none;
             font-weight: bold;
-            font-size: 16px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .price-banner {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-weight: bold;
         }
         
         /* Hero Section - Impacto visual */
@@ -97,155 +121,22 @@
             color: #ff6600;
         }
         
-        /* Seção de Serviços - Layout atrativo */
-        .services {
-            padding: 60px 0;
-            background-color: #fff;
-        }
-        
-        .section-title {
-            font-size: 32px;
-            text-align: center;
-            margin-bottom: 40px;
-            color: #333;
-            position: relative;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 3px;
-            background-color: #ff6600;
-        }
-        
-        .service-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-        }
-        
-        .service-card {
-            background-color: #fff;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-        
-        .service-content {
-            padding: 20px;
-            text-align: center;
-        }
-        
-        .service-content h3 {
-            color: #ff6600;
-            margin-top: 0;
-            font-size: 22px;
-        }
-        
-        .service-content p {
-            color: #666;
-        }
-        
-        /* Rodapé profissional */
-        footer {
-            background-color: #222;
-            color: white;
-            padding: 40px 0 20px;
-            text-align: center;
-        }
-        
-        .footer-contact {
-            margin-bottom: 20px;
-        }
-        
-        .footer-contact p {
-            margin: 5px 0;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin: 20px 0;
-        }
-        
-        .social-links a {
-            color: white;
-            background-color: #444;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
-        
-        .social-links a:hover {
-            background-color: #ff6600;
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            margin-top: 20px;
-            color: #aaa;
-            font-size: 14px;
-        }
-        
-        /* Botão do WhatsApp flutuante */
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background-color: #25D366;
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 60px;
-            font-size: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-            z-index: 100;
-            transition: all 0.3s;
-        }
-        
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-        }
-        
+        /* Seções do conteúdo... (mantenha as outras seções do código anterior) */
+
         /* Responsividade */
         @media (max-width: 768px) {
-            .header-content {
+            .header-top {
                 flex-direction: column;
-                text-align: center;
+                gap: 15px;
             }
             
-            .price-tag {
-                margin-top: 10px;
+            .header-contact {
+                flex-direction: column;
+                gap: 10px;
             }
             
             .hero h1 {
                 font-size: 32px;
-            }
-            
-            .hero p {
-                font-size: 18px;
             }
         }
     </style>
@@ -253,55 +144,36 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <div class="container header-content">
-            <div class="logo">ENTREGAS RÁPIDAS ALPHAVILLE</div>
-            <div class="price-tag">ENTREGA A PARTIR DE R$ 14,00</div>
+        <div class="container">
+            <div class="header-top">
+                <div class="logo">ENTREGAS RÁPIDAS ALPHAVILLE</div>
+                <div class="header-contact">
+                    <div class="phone">
+                        <i class="fas fa-phone"></i> (11) 3136-1615
+                    </div>
+                    <a href="https://wa.me/551131361615" class="header-whatsapp" target="_blank">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+            <div class="price-banner">
+                PREÇO A PARTIR DE R$14
+            </div>
         </div>
     </header>
 
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container">
-            <h1>SERVIÇO DE MOTOBOY ALPHAVILLE</h1>
-            <p>Entregas rápidas, seguras e com preço acessível para empresas e condomínios</p>
+            <h1>30 ANOS DE ENTREGAS RÁPIDAS E SEGURAS</h1>
+            <p>Soluções logísticas confiáveis para Alphaville com agilidade e excelência</p>
             <a href="https://wa.me/551131361615" class="cta-button" target="_blank">
-                <i class="fab fa-whatsapp"></i> CHAMAR NO WHATSAPP
+                <i class="fab fa-whatsapp"></i> SOLICITAR ENTREGA
             </a>
         </div>
     </section>
 
-    <!-- Seção de Serviços -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">NOSSOS SERVIÇOS</h2>
-            
-            <div class="service-grid">
-                <div class="service-card">
-                    <img src="https://ts2.mm.bing.net/th?id=OIP.1FPOvVxX2ephZPaOw2ZLEQHaE7&pid=15.1" alt="Motoboy em entrega" class="service-img">
-                    <div class="service-content">
-                        <h3>ENTREGAS EXPRESSAS</h3>
-                        <p>Documentos, pacotes e encomendas entregues em até 1 hora.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://bing.com/th/id/BCO.8c379612-8a89-433d-835a-220b6c240075.png" alt="Avenida em Alphaville" class="service-img">
-                    <div class="service-content">
-                        <h3>ATENDIMENTO 24H</h3>
-                        <p>Serviço disponível inclusive em finais de semana e feriados.</p>
-                    </div>
-                </div>
-                
-                <div class="service-card">
-                    <img src="https://bing.com/th/id/BCO.dccb45d2-59c3-432d-a0df-7d0383cdd012.png" alt="Entrega em edifício" class="service-img">
-                    <div class="service-content">
-                        <h3>ENTREGAS CORPORATIVAS</h3>
-                        <p>Soluções logísticas completas para empresas.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- [Mantenha todas as outras seções do código anterior aqui] -->
 
     <!-- Rodapé -->
     <footer>
@@ -318,12 +190,12 @@
             </div>
             
             <div class="copyright">
-                &copy; 2023 Entregas Rápidas Alphaville - Todos os direitos reservados
+                &copy; 2023 Entregas Rápidas Alphaville - 30 Anos de Excelência
             </div>
         </div>
     </footer>
 
-    <!-- Botão do WhatsApp -->
+    <!-- Botão do WhatsApp flutuante -->
     <a href="https://wa.me/551131361615" class="whatsapp-btn" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
