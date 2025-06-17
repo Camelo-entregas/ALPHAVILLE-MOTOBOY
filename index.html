@@ -27,6 +27,7 @@
             color: white;
             padding: 20px 0;
             text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
         
         .header-content {
@@ -62,6 +63,7 @@
             font-size: 32px;
             margin-bottom: 20px;
             line-height: 1.3;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero p {
@@ -70,6 +72,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .cta-button {
@@ -83,11 +86,76 @@
             font-size: 18px;
             transition: all 0.3s;
             border: 2px solid #ff6600;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         
         .cta-button:hover {
             background-color: transparent;
             color: #ff6600;
+        }
+        
+        .services {
+            padding: 60px 0;
+            background-color: white;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .service-content {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .service-content h3 {
+            color: #ff6600;
+            margin-top: 0;
+            font-size: 22px;
+        }
+        
+        footer {
+            background-color: #222;
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 60px;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 100;
         }
         
         @media (max-width: 768px) {
@@ -98,6 +166,10 @@
             .contact-info {
                 flex-direction: column;
                 gap: 5px;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -127,6 +199,50 @@
         </div>
     </section>
 
-    <!-- [Adicione aqui outras seções conforme necessário] -->
+    <!-- Seção de Serviços -->
+    <section class="services">
+        <div class="container">
+            <h2 style="text-align: center; font-size: 32px; margin-bottom: 40px; color: #333;">NOSSOS SERVIÇOS</h2>
+            
+            <div class="service-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1601758003122-53c40e686a19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Motoboy em entrega" class="service-img">
+                    <div class="service-content">
+                        <h3>ENTREGAS EXPRESSAS</h3>
+                        <p>Documentos e encomendas entregues em até 1 hora na região de Alphaville.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Entrega corporativa" class="service-img">
+                    <div class="service-content">
+                        <h3>SERVIÇO CORPORATIVO</h3>
+                        <p>Atendimento especial para empresas com relatório de entregas.</p>
+                    </div>
+                </div>
+                
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1499793983690-e29da59ef1c2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80" alt="Edifícios em Alphaville" class="service-img">
+                    <div class="service-content">
+                        <h3>ENTREGAS EM CONDOMÍNIOS</h3>
+                        <p>Acesso facilitado a todos os edifícios comerciais e residenciais.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-phone"></i> (11) 3136-1615 | Atendimento 24 horas</p>
+            <p>&copy; 2023 Motoboy Alphaville - Todos os direitos reservados</p>
+        </div>
+    </footer>
+
+    <!-- Botão do WhatsApp -->
+    <a href="https://wa.me/551131361615" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 </body>
 </html>
