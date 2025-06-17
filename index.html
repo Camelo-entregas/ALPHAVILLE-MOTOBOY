@@ -3,24 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Motoboy Alphaville - Entregas rápidas e urgentes com orçamento sem compromisso. Serviço profissional para empresas e condomínios.">
-    <title>Motoboy Alphaville</title>
+    <title>Motoboy Alphaville - Entregas Rápidas e Urgentes</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* [Mantenha todo o CSS anterior igual] */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: #ff6600;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        
+        .header-content {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-weight: bold;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1558981806-ec527fa84c39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            padding: 100px 20px;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 2px solid #ff6600;
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: #ff6600;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 28px;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                gap: 5px;
+            }
+        }
     </style>
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
         <div class="container">
-            <div class="header-top">
-                <div class="logo">MOTOBOY ALPHAVILLE</div> <!-- Título alterado aqui -->
-                <div class="header-info">
-                    <div class="header-phone">
-                        <i class="fas fa-phone"></i> (11) 3136-1615
-                    </div>
-                    <div class="header-price">PREÇO A PARTIR DE R$14</div>
+            <div class="header-content">
+                <div class="logo">MOTOBOY ALPHAVILLE</div>
+                <div class="contact-info">
+                    <span><i class="fas fa-phone"></i> (11) 3136-1615</span>
+                    <span>PREÇO A PARTIR DE R$14</span>
                 </div>
             </div>
         </div>
@@ -29,7 +119,7 @@
     <!-- Seção Hero -->
     <section class="hero">
         <div class="container">
-            <h1>ENTREGAS RÁPIDAS E URGENTES<br>ORÇAMENTO SEM COMPROMISSO</h1> <!-- Texto alterado aqui -->
+            <h1>ENTREGAS RÁPIDAS E URGENTES<br>ORÇAMENTO SEM COMPROMISSO</h1>
             <p>Soluções logísticas confiáveis para Alphaville com agilidade e excelência</p>
             <a href="https://wa.me/551131361615" class="cta-button" target="_blank">
                 <i class="fab fa-whatsapp"></i> SOLICITAR ENTREGA
@@ -37,7 +127,6 @@
         </div>
     </section>
 
-    <!-- [Mantenha todas as outras seções do código anterior] -->
-
+    <!-- [Adicione aqui outras seções conforme necessário] -->
 </body>
 </html>
